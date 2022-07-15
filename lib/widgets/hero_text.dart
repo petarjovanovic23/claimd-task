@@ -6,17 +6,18 @@ class HeroText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextTheme textTheme = Theme.of(context).textTheme;
     return Column(
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text('${K.heroText} ', style: TextStyle(color: Colors.white, fontSize: 42, fontFamily: K.fontFamilyRoboto)),
-            Text('${K.online}?',
-                style: TextStyle(color: Colors.white, fontSize: 42, fontFamily: K.fontFamilyRoboto, decoration: TextDecoration.underline)),
+          children: [
+            Text('${K.heroText} ', style: textTheme.headline1),
+            Text('${K.online}?', style: textTheme.headline2),
           ],
         ),
-        const Text(K.secondHeroText, style: TextStyle(color: Colors.white, fontSize: 42, fontFamily: K.fontFamilyRoboto)),
+        const SizedBox(height: 12),
+        Text(K.secondHeroText, style: textTheme.headline1),
       ],
     );
   }
