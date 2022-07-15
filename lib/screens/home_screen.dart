@@ -1,8 +1,6 @@
-import 'package:claimd_task/k.dart';
-import 'package:claimd_task/widgets/hero_text.dart';
-import 'package:claimd_task/widgets/search_users.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/search_users.dart';
 import '../widgets/testimonial.dart';
 import '../my_app_bar.dart';
 
@@ -16,15 +14,11 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: LayoutBuilder(builder: (context, constraints) {
           return Column(
-            children: [
-              Stack(
-                alignment: Alignment.center,
-                children: [
-                  Image.asset(K.heroImage, width: double.infinity, fit: BoxFit.fitWidth),
-                  const HeroText(),
-                ],
-              ),
+            children: const [
+              // HeroElement(),
+              SizedBox(height: 64),
               SearchUsers(),
+              SizedBox(height: 64),
               Testimonial(),
             ],
           );

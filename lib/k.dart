@@ -12,12 +12,12 @@ class K {
   static const secondHeroText = "Well look no further, because we have the perfect solution for you.";
   static const online = 'on the line';
 
-  static const trailingText = "Add your friends and create and exchange.";
+  static const trailingText = "Add your friends and exchange instantly.";
 
   static const seeUsers = "See who is already exchanging photos";
   static const usersButton = "See all users";
 
-  static const heroImage = "assets/images/hero.jpeg";
+  static const heroImage = "assets/images/group.jpeg"; //"assets/images/hero.jpeg";
 
   static const testimonialAvatar = 'assets/images/intern.jpeg';
   static const testimonialName = "Billy McMahon";

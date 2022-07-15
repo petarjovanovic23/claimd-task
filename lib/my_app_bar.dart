@@ -14,6 +14,7 @@ class MyAppBar extends StatefulWidget with PreferredSizeWidget {
 class _MyAppBarState extends State<MyAppBar> {
   @override
   Widget build(BuildContext context) {
+    TextStyle textStyle = Theme.of(context).textTheme.headline3!;
     return AppBar(
       toolbarHeight: 80,
       backgroundColor: Colors.white,
@@ -22,7 +23,7 @@ class _MyAppBarState extends State<MyAppBar> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text(K.appName, style: TextStyle(fontFamily: K.fontFamilyVegan, color: Colors.black, fontSize: 32)),
+            Text(K.appName, style: textStyle),
             Image.asset(K.appLogo, height: 42),
           ],
         ),

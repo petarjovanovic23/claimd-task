@@ -1,5 +1,4 @@
 import 'package:claimd_task/k.dart';
-import 'package:claimd_task/widgets/avatar.dart';
 import 'package:flutter/material.dart';
 
 class Testimonial extends StatelessWidget {

@@ -27,6 +27,7 @@ flutter:
     - assets/images/exchangeagram.png
     - assets/images/intern.jpeg
     - assets/images/hero.jpeg
+    - assets/images/group.jpeg
 
   fonts:
     - family: Vegan
