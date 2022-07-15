@@ -25,9 +25,25 @@ flutter:
 
   assets:
     - assets/images/exchangeagram.png
+    - assets/images/intern.jpeg
+    - assets/images/hero.jpeg
 
   fonts:
     - family: Vegan
       fonts:
        - asset: assets/fonts/Vegan-Style.ttf
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Roboto-Italic.ttf
+          style: italic
+    - family: IbarraRealNova
+      fonts:
+        - asset: assets/fonts/IbarraRealNova-Regular.ttf
+        - asset: assets/fonts/IbarraRealNova-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/IbarraRealNova-Italic.ttf
+          style: italic
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './k.dart';
 
 class MyAppBar extends StatefulWidget with PreferredSizeWidget {
   const MyAppBar({Key? key}) : super(key: key);
@@ -21,8 +22,8 @@ class _MyAppBarState extends State<MyAppBar> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text("Exchangeagram", style: TextStyle(fontFamily: 'Vegan', color: Colors.black, fontSize: 32)),
-            Image.asset("assets/images/exchangeagram.png", height: 42),
+            const Text(K.appName, style: TextStyle(fontFamily: K.fontFamilyVegan, color: Colors.black, fontSize: 32)),
+            Image.asset(K.appLogo, height: 42),
           ],
         ),
       ),
