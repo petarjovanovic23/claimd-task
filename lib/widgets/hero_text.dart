@@ -7,18 +7,21 @@ class HeroText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
-    return Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('${K.heroText} ', style: textTheme.headline1),
-            Text('${K.online}?', style: textTheme.headline2),
-          ],
-        ),
-        const SizedBox(height: 12),
-        Text(K.secondHeroText, style: textTheme.headline1),
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(top: 32.0),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('${K.heroText} ', style: textTheme.headline1),
+              Text('${K.online}?', style: textTheme.headline2),
+            ],
+          ),
+          const SizedBox(height: 12),
+          Text(K.secondHeroText, style: textTheme.headline1),
+        ],
+      ),
     );
   }
 }
