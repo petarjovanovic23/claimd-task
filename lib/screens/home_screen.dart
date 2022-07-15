@@ -1,4 +1,5 @@
 import 'package:claimd_task/k.dart';
+import 'package:claimd_task/widgets/hero_text.dart';
 import 'package:claimd_task/widgets/search_users.dart';
 import 'package:flutter/material.dart';
 
@@ -20,20 +21,7 @@ class HomeScreen extends StatelessWidget {
                 alignment: Alignment.center,
                 children: [
                   Image.asset(K.heroImage, width: double.infinity, fit: BoxFit.fitWidth),
-                  Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          Text('${K.heroText} ', style: TextStyle(color: Colors.white, fontSize: 42, fontFamily: K.fontFamilyRoboto)),
-                          Text('${K.online}?',
-                              style: TextStyle(
-                                  color: Colors.white, fontSize: 42, fontFamily: K.fontFamilyRoboto, decoration: TextDecoration.underline)),
-                        ],
-                      ),
-                      Text(K.secondHeroText, style: TextStyle(color: Colors.white, fontSize: 42, fontFamily: K.fontFamilyRoboto)),
-                    ],
-                  ),
+                  const HeroText(),
                 ],
               ),
               SearchUsers(),
