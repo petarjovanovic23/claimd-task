@@ -17,7 +17,8 @@ class AppTheme {
       bodyText2: TextStyle(color: Colors.black54, fontSize: 24, fontFamily: K.fontFamilyIbarra),
       subtitle1: TextStyle(fontSize: 42, fontFamily: K.fontFamilyRoboto, color: Colors.black, fontWeight: FontWeight.w500),
     ),
-    primaryColor: const Color(0xffD8D8E7),
+    primaryColor: const Color(0xffEAEFEF),
+    highlightColor: const Color(0xfffea814),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
