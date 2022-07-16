@@ -11,8 +11,6 @@ class UserProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(16.0),
-
-      //BoxDecoration(border: Border.all(color: Colors.black)),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12.0),
         color: Colors.white,
