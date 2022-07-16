@@ -7,17 +7,20 @@ class UsersGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Flexible(
-      child: GridView.builder(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 3,
-          mainAxisSpacing: 20,
-          mainAxisExtent: 330,
-          crossAxisSpacing: 30,
+      child: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: GridView.builder(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+            mainAxisSpacing: 20,
+            mainAxisExtent: 330,
+            crossAxisSpacing: 30,
+          ),
+          itemCount: 10,
+          itemBuilder: (context, index) {
+            return const UserProfile();
+          },
         ),
-        itemCount: 10,
-        itemBuilder: (context, index) {
-          return const UserProfile();
-        },
       ),
     );
   }

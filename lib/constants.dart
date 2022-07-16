@@ -32,6 +32,8 @@ class K {
   static const following = "Following";
 
   static const searchLabel = "Check to see if your friends are using ${K.appName}!";
+
+  static const viewButton = "View Profile";
 }
 
 class Routes {

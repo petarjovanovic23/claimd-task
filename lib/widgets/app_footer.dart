@@ -6,14 +6,17 @@ class AppFooter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Padding(
-        padding: EdgeInsets.all(24.0),
-        child: Text(
-          K.footerText,
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 24,
+    return Container(
+      color: Colors.white,
+      child: const Center(
+        child: Padding(
+          padding: EdgeInsets.all(18.0),
+          child: Text(
+            K.footerText,
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 24,
+            ),
           ),
         ),
       ),

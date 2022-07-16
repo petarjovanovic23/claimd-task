@@ -1,3 +1,4 @@
+import 'package:claimd_task/widgets/app_footer.dart';
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
@@ -8,13 +9,16 @@ import '../widgets/my_app_bar.dart';
 class UsersScreen extends StatelessWidget {
   const UsersScreen({Key? key}) : super(key: key);
 
-  Row searchBar(TextTheme textTheme) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(K.searchLabel, style: textTheme.subtitle2),
-        const SearchField(),
-      ],
+  Padding searchBar(TextTheme textTheme) {
+    return Padding(
+      padding: const EdgeInsets.all(24.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(K.searchLabel, style: textTheme.subtitle2),
+          const SearchField(),
+        ],
+      ),
     );
   }
 
@@ -24,16 +28,13 @@ class UsersScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       appBar: const MyAppBar(),
-      body: Padding(
-        padding: const EdgeInsets.all(24.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            searchBar(textTheme),
-            const SizedBox(height: 24.0),
-            const UsersGrid(),
-          ],
-        ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          searchBar(textTheme),
+          const UsersGrid(),
+          const AppFooter(),
+        ],
       ),
     );
   }
