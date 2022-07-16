@@ -14,16 +14,6 @@ class HeroText extends StatelessWidget {
       child: Column(
         children: [
           Text('${K.heroText} ${K.online}?', style: textTheme.headline1, textAlign: TextAlign.center),
-          // Container(
-          //
-          //   child: Row(
-          //     mainAxisAlignment: MainAxisAlignment.center,
-          //     children: [
-          //       // Text('${K.heroText} ${K.online}', style: textTheme.headline1),
-          //       // Text('${K.online}?', style: textTheme.headline2),
-          //     ],
-          //   ),
-          // ),
           const SizedBox(height: 12),
           Text(K.secondHeroText, style: textTheme.headline1, textAlign: TextAlign.center),
         ],
