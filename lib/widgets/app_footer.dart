@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../k.dart';
+import '../constants.dart';
 
 class AppFooter extends StatelessWidget {
   const AppFooter({Key? key}) : super(key: key);

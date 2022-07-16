@@ -1,6 +1,6 @@
 import 'package:claimd_task/widgets/testimonial_author.dart';
 import 'package:flutter/material.dart';
-import '../k.dart';
+import '../constants.dart';
 
 class Testimonial extends StatelessWidget {
   const Testimonial({Key? key}) : super(key: key);

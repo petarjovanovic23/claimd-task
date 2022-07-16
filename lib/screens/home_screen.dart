@@ -1,10 +1,11 @@
-import 'package:claimd_task/widgets/app_footer.dart';
-import 'package:claimd_task/widgets/hero_element.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/app_footer.dart';
+import '../widgets/hero_element.dart';
 import '../widgets/search_users.dart';
 import '../widgets/testimonial.dart';
-import '../my_app_bar.dart';
+
+import '../widgets/my_app_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);

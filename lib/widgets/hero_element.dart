@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'hero_text.dart';
-import '../k.dart';
+import '../constants.dart';
 
 class HeroElement extends StatelessWidget {
   const HeroElement({Key? key}) : super(key: key);

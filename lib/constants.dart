@@ -27,3 +27,8 @@ class K {
 
   static const footerText = "Inspired by the movie 'The Internship'. Pretty cool movie you should check it out if you haven't already.";
 }
+
+class Routes {
+  static const home = '/home';
+  static const users = '/users';
+}

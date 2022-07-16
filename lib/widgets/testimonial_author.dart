@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'avatar.dart';
-import '../k.dart';
+import '../constants.dart';
 
 class TestimonialAuthor extends StatelessWidget {
   const TestimonialAuthor({Key? key}) : super(key: key);

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './k.dart';
+import '../constants.dart';
 
 class MyAppBar extends StatefulWidget with PreferredSizeWidget {
   const MyAppBar({Key? key}) : super(key: key);
@@ -18,6 +18,7 @@ class _MyAppBarState extends State<MyAppBar> {
     return AppBar(
       toolbarHeight: 80,
       backgroundColor: Colors.white,
+      leading: const SizedBox.shrink(),
       title: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Row(

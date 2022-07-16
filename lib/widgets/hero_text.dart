@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../k.dart';
+import '../constants.dart';
 
 class HeroText extends StatelessWidget {
   const HeroText({Key? key}) : super(key: key);
