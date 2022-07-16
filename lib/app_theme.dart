@@ -15,7 +15,7 @@ class AppTheme {
       headline4: TextStyle(color: Colors.black, fontSize: 38, fontFamily: K.fontFamilyRoboto),
       bodyText1: TextStyle(color: Colors.black54, fontSize: 34, fontFamily: K.fontFamilyIbarra),
       bodyText2: TextStyle(color: Colors.black54, fontSize: 24, fontFamily: K.fontFamilyIbarra),
-      subtitle1: TextStyle(fontSize: 42, fontFamily: K.fontFamilyRoboto, color: Colors.black, fontWeight: FontWeight.w500),
+      subtitle1: TextStyle(fontSize: 38, fontFamily: K.fontFamilyRoboto, color: Colors.black, fontWeight: FontWeight.w500),
     ),
     primaryColor: const Color(0xffEAEFEF),
     highlightColor: const Color(0xfffea814),

@@ -8,7 +8,7 @@ class Testimonial extends StatelessWidget {
   Container buildTestimonialText(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(top: 72.0, bottom: 24.0),
-      width: 1080,
+      width: 980,
       child: Center(child: Text(K.testimonial, textAlign: TextAlign.center, style: Theme.of(context).textTheme.subtitle1)),
     );
   }
