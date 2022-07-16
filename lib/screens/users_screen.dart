@@ -1,6 +1,6 @@
-import 'package:claimd_task/widgets/app_footer.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/app_footer.dart';
 import '../constants.dart';
 import '../widgets/search_field.dart';
 import '../widgets/users_grid.dart';
@@ -8,19 +8,6 @@ import '../widgets/my_app_bar.dart';
 
 class UsersScreen extends StatelessWidget {
   const UsersScreen({Key? key}) : super(key: key);
-
-  Padding searchBar(TextTheme textTheme) {
-    return Padding(
-      padding: const EdgeInsets.all(24.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(K.searchLabel, style: textTheme.subtitle2),
-          const SearchField(),
-        ],
-      ),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,6 +21,19 @@ class UsersScreen extends StatelessWidget {
           searchBar(textTheme),
           const UsersGrid(),
           const AppFooter(),
+        ],
+      ),
+    );
+  }
+
+  Padding searchBar(TextTheme textTheme) {
+    return Padding(
+      padding: const EdgeInsets.all(24.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(K.searchLabel, style: textTheme.subtitle2),
+          const SearchField(),
         ],
       ),
     );
