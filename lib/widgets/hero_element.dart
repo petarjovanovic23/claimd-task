@@ -3,7 +3,8 @@ import 'hero_text.dart';
 import '../constants.dart';
 
 class HeroElement extends StatelessWidget {
-  const HeroElement({Key? key}) : super(key: key);
+  final BoxConstraints constraints;
+  const HeroElement(this.constraints, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +12,7 @@ class HeroElement extends StatelessWidget {
       alignment: Alignment.topCenter,
       children: [
         Image.asset(K.heroImage, width: double.infinity, fit: BoxFit.fitWidth),
-        const HeroText(),
+        HeroText(constraints),
       ],
     );
   }

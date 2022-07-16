@@ -4,7 +4,7 @@ import '../constants.dart';
 class AppTheme {
   static final theme = ThemeData(
     textTheme: const TextTheme(
-      headline1: TextStyle(color: Colors.white, fontSize: 48, fontFamily: K.fontFamilyRoboto, fontWeight: FontWeight.bold),
+      headline1: TextStyle(color: Colors.white, fontSize: 44, fontFamily: K.fontFamilyRoboto, fontWeight: FontWeight.bold),
       headline2: TextStyle(
           color: Colors.white,
           fontSize: 48,

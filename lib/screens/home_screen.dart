@@ -17,12 +17,12 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: LayoutBuilder(builder: (context, constraints) {
           return Column(
-            children: const [
-              HeroElement(),
-              SearchUsers(),
-              SizedBox(height: 64),
-              Testimonial(),
-              AppFooter(),
+            children: [
+              HeroElement(constraints),
+              const SearchUsers(),
+              const SizedBox(height: 64),
+              const Testimonial(),
+              const AppFooter(),
             ],
           );
         }),
