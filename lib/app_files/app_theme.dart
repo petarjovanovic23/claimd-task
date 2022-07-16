@@ -3,6 +3,7 @@ import '../constants.dart';
 
 class AppTheme {
   static final theme = ThemeData(
+    fontFamily: K.fontFamilyRoboto,
     textTheme: const TextTheme(
       headline1: TextStyle(color: Colors.white, fontSize: 44, fontFamily: K.fontFamilyRoboto, fontWeight: FontWeight.bold),
       headline2: TextStyle(
@@ -16,6 +17,7 @@ class AppTheme {
       bodyText1: TextStyle(color: Colors.black54, fontSize: 34, fontFamily: K.fontFamilyIbarra),
       bodyText2: TextStyle(color: Colors.black54, fontSize: 24, fontFamily: K.fontFamilyIbarra),
       subtitle1: TextStyle(fontSize: 38, fontFamily: K.fontFamilyRoboto, color: Colors.black, fontWeight: FontWeight.w500),
+      subtitle2: TextStyle(color: Colors.black, fontSize: 24, fontFamily: K.fontFamilyRoboto),
     ),
     primaryColor: const Color(0xffEAEFEF),
     highlightColor: const Color(0xfffea814),
