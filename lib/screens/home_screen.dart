@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
         child: LayoutBuilder(builder: (context, constraints) {
           return Column(
             children: const [
-              HeroElement(),
+              // HeroElement(),
               SearchUsers(),
               SizedBox(height: 64),
               Testimonial(),

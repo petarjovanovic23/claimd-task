@@ -6,7 +6,7 @@ class K {
   static const fontFamilyIbarra = 'IbarraRealNova';
 
   static const appLogo = "assets/images/exchangeagram.png";
-  static const testimonial = "A Billion dollar idea...";
+  static const testimonialHeadline = "A Billion dollar idea...";
 
   static const heroText = "What if you could take a quick photo and post it directly";
   static const secondHeroText = "Well look no further, because we have the perfect solution for you.";
@@ -17,9 +17,11 @@ class K {
   static const seeUsers = "See who is already exchanging photos";
   static const usersButton = "See all users";
 
-  static const heroImage = "assets/images/group.jpeg"; //"assets/images/hero.jpeg";
+  static const heroImage = "assets/images/group.jpeg";
 
   static const testimonialAvatar = 'assets/images/intern.jpeg';
   static const testimonialName = "Billy McMahon";
   static const testimonialWork = "Intern at Google";
+  static const testimonial =
+      "So I have an idea...nowadays, people are taking pictures, right? They have their phones now, They're out. Something catches their eye, they want to take it. But then the photo's just sitting there... what if they take that photo and instantaneously put it out there on the line and they share it with their friends? I'm creating an exchange.\nA Billion-dollar idea.";
 }
