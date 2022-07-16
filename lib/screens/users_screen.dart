@@ -1,11 +1,22 @@
-import 'package:claimd_task/constants.dart';
-import 'package:claimd_task/widgets/search_field.dart';
-import 'package:claimd_task/widgets/user_profile.dart';
 import 'package:flutter/material.dart';
+
+import '../constants.dart';
+import '../widgets/search_field.dart';
+import '../widgets/users_grid.dart';
 import '../widgets/my_app_bar.dart';
 
 class UsersScreen extends StatelessWidget {
   const UsersScreen({Key? key}) : super(key: key);
+
+  Row searchBar(TextTheme textTheme) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(K.searchLabel, style: textTheme.subtitle2),
+        const SearchField(),
+      ],
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -18,28 +29,9 @@ class UsersScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text("Check to see if your friends are using ${K.appName}!", style: textTheme.subtitle2),
-                const SearchField(),
-              ],
-            ),
+            searchBar(textTheme),
             const SizedBox(height: 24.0),
-            Flexible(
-              child: GridView.builder(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  mainAxisSpacing: 20,
-                  mainAxisExtent: 330,
-                  crossAxisSpacing: 30,
-                ),
-                itemCount: 10,
-                itemBuilder: (context, index) {
-                  return const UserProfile();
-                },
-              ),
-            ),
+            const UsersGrid(),
           ],
         ),
       ),

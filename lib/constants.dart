@@ -23,13 +23,15 @@ class K {
   static const testimonialName = "Billy McMahon";
   static const testimonialWork = "Intern at Google";
   static const testimonial =
-      "So I have an idea...nowadays, people are taking pictures, right? They have their phones now, They're out. Something catches their eye, they want to take it. But then the photo's just sitting there... what if they take that photo and instantaneously put it out there on the line and they share it with their friends? I'm creating an exchange.\nA Billion-dollar idea.";
+      "Nowadays, people are taking pictures, right? They have their phones now, they're out. Something catches their eye, they want to take it. But then the photo's just sitting there... what if they take that photo and instantaneously put it out there on the line and they share it with their friends? I'm talking about creating an exchange.\nA Billion-dollar idea.";
 
   static const footerText = "Inspired by the movie 'The Internship'. Pretty cool movie you should check it out if you haven't already.";
 
   static const posts = "Posts";
   static const followers = "Followers";
   static const following = "Following";
+
+  static const searchLabel = "Check to see if your friends are using ${K.appName}!";
 }
 
 class Routes {
