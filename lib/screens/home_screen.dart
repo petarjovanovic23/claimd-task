@@ -1,3 +1,4 @@
+import 'package:claimd_task/widgets/hero_element.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/search_users.dart';
@@ -15,8 +16,7 @@ class HomeScreen extends StatelessWidget {
         child: LayoutBuilder(builder: (context, constraints) {
           return Column(
             children: const [
-              // HeroElement(),
-              SizedBox(height: 64),
+              HeroElement(),
               SearchUsers(),
               SizedBox(height: 64),
               Testimonial(),

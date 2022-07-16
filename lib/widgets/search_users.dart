@@ -6,22 +6,19 @@ class SearchUsers extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TextStyle mainStyle = Theme.of(context).textTheme.headline3!;
-    TextStyle headline = Theme.of(context).textTheme.headline4!;
+    TextTheme textTheme = Theme.of(context).textTheme;
     return Column(
       children: [
-        Text(K.trailingText, style: headline),
-        Text(K.seeUsers, style: mainStyle),
+        Container(
+            color: Theme.of(context).primaryColor, height: 200, child: Center(child: Text(K.trailingText, style: textTheme.bodyText1))),
+        const SizedBox(height: 64.0),
+        Text(K.seeUsers, style: textTheme.bodyText1),
+        const SizedBox(height: 32.0),
         ElevatedButton(
-          // style: ButtonStyle(
-          //   shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(18.0))),
-          //   padding: MaterialStateProperty.all(const EdgeInsets.symmetric(vertical: 24.0, horizontal: 48.0)),
-          //   backgroundColor: MaterialStateProperty.all(Colors.black26),
-          // ),
           onPressed: () {},
-          child: const Text(
+          child: Text(
             K.usersButton,
-            style: TextStyle(color: Colors.white70, fontSize: 24, fontFamily: K.fontFamilyIbarra),
+            style: textTheme.bodyText2,
           ),
         ),
       ],
