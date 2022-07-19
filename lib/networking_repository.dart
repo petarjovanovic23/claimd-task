@@ -1,4 +1,5 @@
 import 'package:claimd_task/models/user.dart';
+import 'package:claimd_task/models/users.dart';
 import 'package:dio/dio.dart';
 
 class NetworkingRepository {
@@ -9,17 +10,13 @@ class NetworkingRepository {
     _dio = Dio(options);
   }
 
-  Future<List<User>> fetchUsers() async {
+  Future fetchUsers() async {
     try {
       final response = await _dio.get('/users');
 
-      List<User> users = [];
-      response.data.toList().forEach((e) => users.add(User.fromJson(e)));
-
-      return users;
+      response.data.toList().forEach((e) => Users.users.add(User.fromJson(e)));
     } catch (error) {
       print(error);
-      return [];
     }
   }
 

@@ -33,7 +33,7 @@ class K {
 
   static const searchLabel = "Check to see if your friends are using ${K.appName}!";
 
-  static const viewButton = "View Profile";
+  static const viewButton = "Visit Instagram Profile";
 }
 
 class Routes {

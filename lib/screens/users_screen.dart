@@ -1,3 +1,4 @@
+import 'package:claimd_task/models/users.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/app_footer.dart';

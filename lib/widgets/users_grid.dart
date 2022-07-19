@@ -1,3 +1,4 @@
+import 'package:claimd_task/models/users.dart';
 import 'package:flutter/material.dart';
 import 'user_profile.dart';
 
@@ -16,9 +17,9 @@ class UsersGrid extends StatelessWidget {
             mainAxisExtent: 330,
             crossAxisSpacing: 30,
           ),
-          itemCount: 10,
+          itemCount: Users.users.length,
           itemBuilder: (context, index) {
-            return const UserProfile();
+            return UserProfile(Users.users[index]);
           },
         ),
       ),
