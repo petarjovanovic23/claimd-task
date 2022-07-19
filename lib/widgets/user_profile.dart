@@ -43,7 +43,7 @@ class UserProfile extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
         ),
         const SizedBox(height: 12.0),
-        const VisitButton(),
+        VisitButton(user.username),
       ],
     );
   }
