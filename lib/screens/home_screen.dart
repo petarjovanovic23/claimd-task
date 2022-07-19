@@ -1,3 +1,4 @@
+import 'package:claimd_task/networking_repository.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/app_footer.dart';
@@ -12,6 +13,9 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    NetworkingRepository networkingRepository = NetworkingRepository();
+    networkingRepository.fetchUsers();
+
     return Scaffold(
       appBar: const MyAppBar(),
       body: SingleChildScrollView(
