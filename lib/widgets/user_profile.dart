@@ -74,7 +74,7 @@ class UserProfile extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        Avatar(user.imageUrl), //Avatar("https://icon-library.com/images/avatar-icon-images/avatar-icon-images-4.jpg"),
+        Avatar(user.imageUrl),
         VerticalBlock(count: user.postsCount, label: K.posts),
         VerticalBlock(count: user.followingCount, label: K.followers),
         VerticalBlock(count: user.followsCount, label: K.following),
