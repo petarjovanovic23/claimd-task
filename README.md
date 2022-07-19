@@ -5,7 +5,7 @@ Web application built using Flutter serving as a challenge. App is a concept of 
 ## Application overview
 
 Build using Dart&Flutter, the API was built using Node.js and the API documentation with Swagger UI. 
-The backend part of this project is hosted to a different repository on my profile named '/ig-clone'.
+The backend part of this project is hosted to a different repository on my profile named '/ig-clone-node'.
 
 The app is very small and has very few functionalities thus the design itself is very simple and basic. 
 
