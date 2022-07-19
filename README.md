@@ -2,15 +2,12 @@
 
 Web application built using Flutter serving as a challenge. App is a concept of a social media platform, which allows you to search for users that have Instagram(Exchangeagram) profiles. The name Exchangeagram is a reference to the movie 'The Internship'. Making this app totally different than IG!
 
-## Getting Started
+## Application overview
 
-This project is a starting point for a Flutter application.
+Build using Dart&Flutter, the API was built using Node.js and the API documentation with Swagger UI. 
+The backend part of this project is hosted to a different repository on my profile named '/ig-clone'.
 
-A few resources to get you started if this is your first Flutter project:
+The app is very small and has very few functionalities thus the design itself is very simple and basic. 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Hope the app makes you laugh. 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
