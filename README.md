@@ -1,6 +1,6 @@
 # claimd_task
 
-A new Flutter project.
+Web application built using Flutter serving as a challenge. App is a concept of a social media platform, which allows you to search for users that have Instagram(Exchangeagram) profiles. The name Exchangeagram is a reference to the movie 'The Internship'. Making this app totally different than IG!
 
 ## Getting Started
 
