@@ -1,7 +1,7 @@
-import 'package:claimd_task/models/users.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../models/users.dart';
 import '../widgets/app_footer.dart';
 import '../constants.dart';
 import '../widgets/search_field.dart';

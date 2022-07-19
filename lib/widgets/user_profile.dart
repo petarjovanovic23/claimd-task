@@ -1,6 +1,6 @@
-import 'package:claimd_task/models/user.dart';
 import 'package:flutter/material.dart';
 
+import '../models/user.dart';
 import '../constants.dart';
 
 import 'visit_button.dart';

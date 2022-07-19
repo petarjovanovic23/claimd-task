@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
-import '../networking_repository.dart';
 import '../widgets/app_footer.dart';
 import '../widgets/hero_element.dart';
 import '../widgets/search_users.dart';

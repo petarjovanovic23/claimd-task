@@ -1,7 +1,8 @@
-import 'package:claimd_task/models/user.dart';
-import 'package:claimd_task/models/users.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
+
+import '../models/user.dart';
+import '../models/users.dart';
 import '../networking_repository.dart';
 
 class SearchField extends StatefulWidget {
