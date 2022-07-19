@@ -1,8 +1,9 @@
-import 'package:claimd_task/models/user.dart';
-import 'package:claimd_task/models/users.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
+import 'models/user.dart';
+import 'models/users.dart';
 
-class NetworkingRepository {
+class NetworkingRepository extends ChangeNotifier {
   late final Dio _dio;
 
   NetworkingRepository() {
@@ -13,7 +14,7 @@ class NetworkingRepository {
   Future fetchUsers() async {
     try {
       final response = await _dio.get('/users');
-
+      Users.users = [];
       response.data.toList().forEach((e) => Users.users.add(User.fromJson(e)));
     } catch (error) {
       print(error);

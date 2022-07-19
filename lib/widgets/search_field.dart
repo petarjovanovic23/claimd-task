@@ -1,4 +1,8 @@
+import 'package:claimd_task/models/user.dart';
+import 'package:claimd_task/models/users.dart';
+import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
+import '../networking_repository.dart';
 
 class SearchField extends StatefulWidget {
   const SearchField({Key? key}) : super(key: key);
@@ -22,11 +26,13 @@ class _SearchFieldState extends State<SearchField> {
     searchController.dispose();
   }
 
-  void search(value, users) {
+  void search(value, BuildContext context) async {
+    final usersProvider = context.read<Users>();
     if (searchController.text == "") {
-      // deactivate search
+      usersProvider.deactivateSearch();
     } else {
-      // search for a value
+      final User user = await context.read<NetworkingRepository>().fetchUser(value) as User;
+      usersProvider.search(user);
     }
   }
 
@@ -47,6 +53,8 @@ class _SearchFieldState extends State<SearchField> {
           ),
         ),
         textInputAction: TextInputAction.search,
+        controller: searchController,
+        onSubmitted: (value) => search(value, context),
       ),
     );
   }

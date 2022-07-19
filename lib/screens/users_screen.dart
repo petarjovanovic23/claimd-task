@@ -1,5 +1,6 @@
 import 'package:claimd_task/models/users.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../widgets/app_footer.dart';
 import '../constants.dart';
@@ -13,17 +14,22 @@ class UsersScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
-    return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
-      appBar: const MyAppBar(),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          searchBar(textTheme),
-          const UsersGrid(),
-          const AppFooter(),
-        ],
-      ),
+    return ChangeNotifierProvider(
+      create: (_) => Users(),
+      child: Builder(builder: (context) {
+        return Scaffold(
+          backgroundColor: Theme.of(context).primaryColor,
+          appBar: const MyAppBar(),
+          body: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              searchBar(textTheme),
+              const UsersGrid(),
+              const AppFooter(),
+            ],
+          ),
+        );
+      }),
     );
   }
 
