@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     NetworkingRepository networkingRepository = NetworkingRepository();
-    networkingRepository.fetchUsers();
+    networkingRepository.fetchUser('petarj77');
 
     return Scaffold(
       appBar: const MyAppBar(),

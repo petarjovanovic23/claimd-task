@@ -13,12 +13,26 @@ class NetworkingRepository {
     try {
       final response = await _dio.get('/users');
 
-      print(response.data);
+      List<User> users = [];
+      response.data.toList().forEach((e) => users.add(User.fromJson(e)));
 
-      return [];
+      return users;
     } catch (error) {
       print(error);
       return [];
+    }
+  }
+
+  Future<User?> fetchUser(String username) async {
+    try {
+      final response = await _dio.get('/users/$username');
+
+      final user = User.fromJson(response.data[0]);
+
+      return user;
+    } catch (error) {
+      print(error);
+      return null;
     }
   }
 }
