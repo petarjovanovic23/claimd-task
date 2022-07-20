@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tv_shows/providers/request_state.dart';
+import 'package:claimd_task/request_state.dart';
 
 abstract class RequestProvider<Value> with ChangeNotifier {
   RequestProvider({RequestState<Value, Exception> initial = const RequestState.initial()}) : _requestState = initial;
