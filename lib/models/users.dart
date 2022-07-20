@@ -11,7 +11,16 @@ class Users extends ChangeNotifier {
   void search(user) {
     isSearchActive = true;
     searchedUser = user;
-    users.add(user);
+    bool exists = false;
+    users.forEach((element) {
+      if (element.username == user.username) {
+        exists = true;
+      }
+    });
+
+    if (!exists) {
+      users.add(user);
+    }
     notifyListeners();
   }
 

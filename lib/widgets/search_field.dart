@@ -1,3 +1,4 @@
+import 'package:claimd_task/models/user_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 
@@ -32,8 +33,10 @@ class _SearchFieldState extends State<SearchField> {
     if (searchController.text == "") {
       usersProvider.deactivateSearch();
     } else {
-      final User user = await context.read<NetworkingRepository>().fetchUser(value) as User;
-      usersProvider.search(user);
+      print("triggering the request");
+      context.read<UserProvider>().searchUser(value, context.read<NetworkingRepository>());
+      // final User user = await context.read<NetworkingRepository>().fetchUser(value) as User;
+      // usersProvider.search(user);
     }
   }
 

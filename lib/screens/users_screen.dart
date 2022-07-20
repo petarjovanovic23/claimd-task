@@ -1,3 +1,5 @@
+import 'package:claimd_task/models/user_provider.dart';
+import 'package:claimd_task/provider_listener.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -14,8 +16,11 @@ class UsersScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
-    return ChangeNotifierProvider(
-      create: (_) => Users(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => Users()),
+        ChangeNotifierProvider(create: (_) => UserProvider()),
+      ],
       child: Builder(builder: (context) {
         return Scaffold(
           backgroundColor: Theme.of(context).primaryColor,

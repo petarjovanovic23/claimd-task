@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../models/user_provider.dart';
+import '../provider_listener.dart';
 
 import '../models/users.dart';
 import '../models/user.dart';
@@ -14,24 +16,37 @@ class UsersGrid extends StatelessWidget {
     return buildUsersGrid(usersProvider);
   }
 
-  Flexible buildUsersGrid(Users usersProvider) {
-    // OLD CODE
-    // -------------------
-    return Flexible(
-      child: Padding(
-        padding: const EdgeInsets.all(24.0),
-        child: GridView.builder(
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
-            mainAxisSpacing: 20,
-            mainAxisExtent: 330,
-            crossAxisSpacing: 30,
-          ),
-          itemCount: usersProvider.isSearchActive ? 1 : Users.users.length,
-          itemBuilder: (context, index) {
-            // return FutureBuilder(builder: builder);
-            return usersProvider.isSearchActive ? UserProfile(usersProvider.searchedUser as User) : UserProfile(Users.users[index]);
+  Widget buildUsersGrid(Users usersProvider) {
+    return ProviderListener<UserProvider>(
+      listener: (context, userProvider) {
+        userProvider.state.maybeWhen(
+          orElse: () {},
+          success: (user) {
+            print('done ');
+            print(user!.username);
+            usersProvider.search(user);
           },
+          loading: () {
+            print("now is loading the request");
+          },
+        );
+      },
+      child: Flexible(
+        child: Padding(
+          padding: const EdgeInsets.all(24.0),
+          child: GridView.builder(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3,
+              mainAxisSpacing: 20,
+              mainAxisExtent: 330,
+              crossAxisSpacing: 30,
+            ),
+            itemCount: usersProvider.isSearchActive ? 1 : Users.users.length,
+            itemBuilder: (context, index) {
+              // return FutureBuilder(builder: builder);
+              return usersProvider.isSearchActive ? UserProfile(usersProvider.searchedUser as User) : UserProfile(Users.users[index]);
+            },
+          ),
         ),
       ),
     );

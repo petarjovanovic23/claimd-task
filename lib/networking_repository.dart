@@ -25,7 +25,12 @@ class NetworkingRepository extends ChangeNotifier {
     try {
       final response = await _dio.get('/users/$username');
 
-      final user = User.fromJson(response.data[0]);
+      final user;
+      if (response.data[0] == null) {
+        user = User.fromJson(response.data);
+      } else {
+        user = User.fromJson(response.data[0]);
+      }
 
       return user;
     } catch (error) {
