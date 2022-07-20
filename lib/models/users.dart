@@ -11,6 +11,7 @@ class Users extends ChangeNotifier {
   void search(user) {
     isSearchActive = true;
     searchedUser = user;
+    users.add(user);
     notifyListeners();
   }
 
