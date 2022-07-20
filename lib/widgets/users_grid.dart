@@ -27,6 +27,7 @@ class UsersGrid extends StatelessWidget {
           ),
           itemCount: usersProvider.isSearchActive ? 1 : Users.users.length,
           itemBuilder: (context, index) {
+            // return FutureBuilder(builder: builder);
             return usersProvider.isSearchActive ? UserProfile(usersProvider.searchedUser as User) : UserProfile(Users.users[index]);
           },
         ),

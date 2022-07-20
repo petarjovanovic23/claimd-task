@@ -37,7 +37,7 @@ class UserProfile extends StatelessWidget {
         buildName(context),
         const SizedBox(height: 12.0),
         Text(
-          user.biography,
+          user.biography != "empty" ? user.biography : "",
           style: const TextStyle(color: Colors.black, fontSize: 20, fontFamily: K.fontFamilyRoboto),
           maxLines: 2,
           overflow: TextOverflow.ellipsis,

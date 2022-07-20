@@ -7,9 +7,9 @@ class User {
   final String username;
   final String name;
   final String biography;
-  final int followingCount;
-  final int followsCount;
-  final int postsCount;
+  final String followingCount;
+  final String followsCount;
+  final String postsCount;
   final String imageUrl;
   final bool isVerified;
   final bool isPrivate;

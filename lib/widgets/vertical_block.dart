@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 
 class VerticalBlock extends StatelessWidget {
-  final int count;
+  final String count;
   final String label;
   const VerticalBlock({required this.count, required this.label, Key? key}) : super(key: key);
 
   String roundCount() {
-    if (count >= 1000 && count <= 999999) {
-      var newCount = (count / 1000).floor().toInt();
+    var tempCount = double.parse(count);
+    print(tempCount);
+    if (tempCount >= 1000 && tempCount <= 999999) {
+      var newCount = (tempCount / 1000).floor().toInt();
       return "${newCount}K";
-    } else if (count >= 1000000) {
-      var newCount = (count / 1000000).floor().toInt();
+    } else if (tempCount >= 1000000) {
+      var newCount = (tempCount / 1000000).floor().toInt();
       return "${newCount}M";
     } else {
-      return "${count.round()}";
+      return "${tempCount.round()}";
     }
   }
 
@@ -24,7 +26,7 @@ class VerticalBlock extends StatelessWidget {
       height: 60,
       child: Column(
         children: [
-          Text(roundCount(), style: textStyle),
+          Text(count, style: textStyle),
           Text(label, style: textStyle),
         ],
       ),

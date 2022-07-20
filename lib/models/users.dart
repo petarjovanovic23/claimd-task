@@ -18,4 +18,8 @@ class Users extends ChangeNotifier {
     isSearchActive = false;
     notifyListeners();
   }
+
+  void fetchUsers() {}
+
+  void fetchUser(String username) {}
 }
